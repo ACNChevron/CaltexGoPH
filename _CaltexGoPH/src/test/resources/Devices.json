@@ -1,0 +1,28 @@
+{
+	"vivo_1811": {
+		"platformName":"Android",
+		"udid":"c744264a",
+		"automationName":"UiAutomator2",
+		"appPackage":"com.chevron.caltexgo.prod",
+		"appActivity":"com.chevron.caltexgo.prod.MainActivity",
+		"url":"http://127.0.0.1:4723/wd/hub"
+    },
+	"BrowserStack": {
+		"platformName":"Android",
+		"device":"Samsung Galaxy S8 Plus",
+		"os_version":"7.0",
+		"project":"My First Project",
+		"build":"My First Build",
+		"name":"Bstack-[Java] SwagLabs Test",
+		"app_PublicURL":"https://github.com/ACNChevron/CaltexGo_Mobile_Automation_APKRepo/raw/main/Android.SauceLabs.Mobile.Sample.app.2.2.1.apk"
+	},
+	"BrowserStack_CaltexGo": {
+		"platformName":"Android",
+		"device":"Samsung Galaxy S8 Plus",
+		"os_version":"7.0",
+		"project":"My First Project",
+		"build":"My First Build",
+		"name":"Bstack-[Java] SwagLabs Test",
+		"app":"bs://fea177bb0b48cef9884ef62d9746979c22f504c1"
+	}
+}

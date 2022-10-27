@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="deviceID" value="vivo_1811"/>
+    <classes>
+      <class name="tests.OnBoarding_LandingPage">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="TS1_CountrySelector" invocation-numbers="0"/>
+          <include name="TS2_ChangeLanguage" invocation-numbers="0"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- tests.OnBoarding_LandingPage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="90288" started-at="2022-10-27T13:59:31 GMT+08:00" finished-at="2022-10-27T14:01:01 GMT+08:00">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="90288" started-at="2022-10-27T13:59:31 GMT+08:00" finished-at="2022-10-27T14:01:01 GMT+08:00">
+      <class name="tests.OnBoarding_LandingPage">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:tests.OnBoarding_LandingPage@1563da5]" name="beforeTest" is-config="true" duration-ms="29355" started-at="2022-10-27T13:59:31 GMT+08:00" finished-at="2022-10-27T14:00:00 GMT+08:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vivo_1811]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="Prereq_clickAllow(java.util.HashMap)[pri:0, instance:tests.OnBoarding_LandingPage@1563da5]" name="Prereq_clickAllow" duration-ms="11680" started-at="2022-10-27T14:00:02 GMT+08:00" data-provider="localDataSheet" finished-at="2022-10-27T14:00:14 GMT+08:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Country Options=Australia;Malaysia;Philippines;Thailand}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Prereq_clickAllow -->
+        <test-method status="PASS" signature="TS1_CountrySelector(java.util.HashMap)[pri:0, instance:tests.OnBoarding_LandingPage@1563da5]" name="TS1_CountrySelector" duration-ms="29755" started-at="2022-10-27T14:00:14 GMT+08:00" data-provider="localDataSheet" finished-at="2022-10-27T14:00:43 GMT+08:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Country Options=Australia;Malaysia;Philippines;Thailand}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS1_CountrySelector -->
+        <test-method status="PASS" signature="TS2_ChangeLanguage(java.util.HashMap)[pri:0, instance:tests.OnBoarding_LandingPage@1563da5]" name="TS2_ChangeLanguage" duration-ms="16925" started-at="2022-10-27T14:00:43 GMT+08:00" data-provider="localDataSheet" finished-at="2022-10-27T14:01:00 GMT+08:00">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Country Options=Australia;Malaysia;Philippines;Thailand}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS2_ChangeLanguage -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:tests.OnBoarding_LandingPage@1563da5]" name="quit" is-config="true" duration-ms="1009" started-at="2022-10-27T14:01:00 GMT+08:00" finished-at="2022-10-27T14:01:01 GMT+08:00">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- tests.OnBoarding_LandingPage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
