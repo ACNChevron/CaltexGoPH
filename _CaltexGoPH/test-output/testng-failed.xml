@@ -4,14 +4,14 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="deviceID" value="vivo_1811"/>
     <classes>
-      <class name="tests.OnBoarding_LandingPage">
+      <class name="tests.OnBoarding_SignIn">
         <methods>
+          <include name="TS1_MobileNumber" invocation-numbers="0"/>
           <include name="beforeTest"/>
-          <include name="TS1_CountrySelector" invocation-numbers="0"/>
-          <include name="TS2_ChangeLanguage" invocation-numbers="0"/>
+          <include name="TS2_EmailAddress" invocation-numbers="0"/>
           <include name="quit"/>
         </methods>
-      </class> <!-- tests.OnBoarding_LandingPage -->
+      </class> <!-- tests.OnBoarding_SignIn -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -16,7 +16,7 @@ public class OnBoarding_LandingPage extends BaseTest {
 		
 		landingPage.clickAllow();
 		
-		Thread.sleep(3000);		
+		Thread.sleep(5000);		
 	}
 	
 	@Test(dataProvider="localDataSheet")
@@ -39,6 +39,8 @@ public class OnBoarding_LandingPage extends BaseTest {
 		LandingPage landingPage = new LandingPage();
 		
 		landingPage.clickLanguageSelector();
+		
+		landingPage.verifySupportedLanguagesPerCountry(testData.get("Language Options").split(";"));		
 		
 		landingPage.clickEnglishButton();
 		

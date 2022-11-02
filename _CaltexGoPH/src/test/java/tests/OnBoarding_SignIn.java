@@ -41,6 +41,14 @@ public class OnBoarding_SignIn extends BaseTest {
 		
 		landingPage.clickLogin();
 		
+		signInPage.enterMobileNumber(testData.get("Incorrect Mobile Number"));
+		
+		signInPage.clickContinue();
+		
+		Thread.sleep(3000);
+		
+		signInPage.verifyErrorMessage_IncorrectMobileNumber(testData.get("Error Message_Incorrect Mobile Nubmer"));
+		
 		signInPage.enterMobileNumber(credentials.get("Mobile Number"));
 		
 		signInPage.clickContinue();

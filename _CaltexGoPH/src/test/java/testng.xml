@@ -3,7 +3,7 @@
   <test name="Test">
     <classes>
       <parameter name="deviceID" value="vivo_1811"/>
-      <class name="tests.OnBoarding_LandingPage"/>
+      <class name="tests.OnBoarding_SignIn"/>
       <!-- <class name="tests.zTest"/> -->
     </classes>
   </test> <!-- Test -->
