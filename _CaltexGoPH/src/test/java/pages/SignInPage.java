@@ -1,10 +1,14 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import base.BasePage;
+import base.DriverManager;
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
@@ -44,7 +48,7 @@ public class SignInPage extends BasePage {
 	}
 	
 	public SignInPage clickContinue() {
-		System.out.println("WelcomeBackLoginToContinuePage > clickContinue() was invoked.");
+		System.out.println("SignInPage > clickContinue() was invoked.");
 		
 		//Store Web Element for allowButton
 		WebElement e = wait.until(ExpectedConditions.visibilityOf(continueButton));
@@ -58,7 +62,7 @@ public class SignInPage extends BasePage {
 	}	
 	
 	public SignInPage clickLoginUsingEmail() {
-		System.out.println("WelcomeBackLoginToContinuePage > clickLoginUsingEmail() was invoked.");
+		System.out.println("SignInPage > clickLoginUsingEmail() was invoked.");
 		
 		//Store Web Element for loginUsingEmailButton
 		WebElement e = wait.until(ExpectedConditions.visibilityOf(loginUsingEmailButton));
@@ -72,7 +76,7 @@ public class SignInPage extends BasePage {
 	}	
 	
 	public SignInPage enterEmailAddress(String emailAddress) {
-		System.out.println("WelcomeBackLoginToContinuePage > enterEmailAddress() was invoked.");
+		System.out.println("SignInPage > enterEmailAddress() was invoked.");
 		
 		//Store Web Element for emailAddressField
 		WebElement e = wait.until(ExpectedConditions.visibilityOf(emailAddressField));
@@ -86,15 +90,15 @@ public class SignInPage extends BasePage {
 	}	
 	
 	public SignInPage verifyErrorMessage_IncorrectMobileNumber(String expectedErrorMessage) {
-		System.out.println("WelcomeBackLoginToContinuePage > verifyErrorMessage_IncorrectMobileNumber() was invoked.");
+		System.out.println("SignInPage > verifyErrorMessage_IncorrectMobileNumber() was invoked.");
 		
 		//Store Web Element for Error Message Incorrect Mobile Number
-		WebElement e = wait.until(ExpectedConditions.visibilityOf(errorMessage_IncorrectMobileNumber));
-		System.out.println("Web Element for Error Message Incorrect Mobile Number Field was stored.");
+		List<WebElement> listElement = DriverManager.getDriver().findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView");
+		System.out.println("List of WebElement for Error Message_Incorrect Mobile Number with size '"+listElement.size()+"' was stored.");
 		
-		//Get Error Message Text for Incorrect Mobile Number
-		Assert.assertEquals(e.getText(), expectedErrorMessage);
-		System.out.println("Error Message for Incorrect Mobile Number '"+e.getText()+"' was verified.");
+		//Verify if Error Message is equal to expected
+		Assert.assertEquals(listElement.get(2).getText(), expectedErrorMessage);
+		System.out.println("Error message was verified to be equal to expected.");
 
 		return this;
 	}	
