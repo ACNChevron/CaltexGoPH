@@ -2,8 +2,8 @@
 <suite parallel="false" name="Suite">
   <test name="Test">
     <classes>
-      <parameter name="deviceID" value="vivo_1811"/>
-      <class name="tests.OnBoarding_SignIn"/>
+      <parameter name="deviceID" value="Digital.ai_CaltexGo"/>
+      <class name="tests.OnBoarding_LandingPage"/>
       <!-- <class name="tests.zTest"/> -->
     </classes>
   </test> <!-- Test -->

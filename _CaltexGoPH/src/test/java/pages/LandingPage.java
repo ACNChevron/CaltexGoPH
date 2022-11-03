@@ -26,17 +26,53 @@ public class LandingPage extends BasePage {
 	@iOSXCUITFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup")
 	private WebElement countrySelectorButton;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView")
-	@iOSXCUITFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView")
+	@AndroidFindBy(xpath = "//*[@text='Philippines']")
+	@iOSXCUITFindBy(xpath = "//*[@text='Philippines']")
 	private WebElement philippinesButton;
+	
+	@AndroidFindBy(xpath = "//*[@text='Australia']")
+	@iOSXCUITFindBy(xpath = "//*[@text='Australia']")
+	private WebElement australiaButton;
+	
+	@AndroidFindBy(xpath = "//*[@text='Malaysia']")
+	@iOSXCUITFindBy(xpath = "//*[@text='Malaysia']")
+	private WebElement malaysiaButton;
+	
+	@AndroidFindBy(xpath = "//*[@text='Thailand']")
+	@iOSXCUITFindBy(xpath = "//*[@text='Thailand']")
+	private WebElement thailandButton;
 	
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup")
 	@iOSXCUITFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup")
 	private WebElement languageSelectorButton;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView")
-	@iOSXCUITFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView")
+	@AndroidFindBy(xpath = "//*[@text='English']")
+	@iOSXCUITFindBy(xpath = "//*[@text='English']")
 	private WebElement englishButton;
+	
+	@AndroidFindBy(xpath = "//*[@text='ไทย']")
+	@iOSXCUITFindBy(xpath = "//*[@text='ไทย']")
+	private WebElement thaiButton;
+	
+	@AndroidFindBy(xpath = "//*[@text='Bahasa Melayu']")
+	@iOSXCUITFindBy(xpath = "//*[@text='Bahasa Melayu']")
+	private WebElement bahasaMelayuButton;
+	
+	@AndroidFindBy(xpath = "//*[@text='Daftar']")
+	@iOSXCUITFindBy(xpath = "//*[@text='Daftar']")
+	private WebElement daftarButton;
+	
+	@AndroidFindBy(xpath = "//*[@text='Log masuk']")
+	@iOSXCUITFindBy(xpath = "//*[@text='Log masuk']")
+	private WebElement logMasukButton;
+	
+	@AndroidFindBy(xpath = "//*[@text='ลงทะเบียน']")
+	@iOSXCUITFindBy(xpath = "//*[@text='ลงทะเบียน']")
+	private WebElement signUp_ThaiButton;
+	
+	@AndroidFindBy(xpath = "//*[@text='เข้าสู่ระบบ']")
+	@iOSXCUITFindBy(xpath = "//*[@text='เข้าสู่ระบบ']")
+	private WebElement logIn_ThaiButton;
 	
 	public LandingPage clickAllow() {
 		System.out.println("LandingPage > clickAllow() was invoked.");
@@ -108,6 +144,48 @@ public class LandingPage extends BasePage {
 		return this;
 	}
 	
+	public LandingPage clickAustralia() {
+		System.out.println("LandingPage > clickAustralia() was invoked.");
+		
+		//Store Web Element for australiaButton
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(australiaButton));
+		System.out.println("Web Element for Australia was stored.");
+		
+		//Click Australia Button
+		e.click();
+		System.out.println("Australia Button was clicked.");
+		
+		return this;
+	}
+	
+	public LandingPage clickMalaysia() {
+		System.out.println("LandingPage > clickMalaysia() was invoked.");
+		
+		//Store Web Element for malaysiaButton
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(malaysiaButton));
+		System.out.println("Web Element for Malaysia was stored.");
+		
+		//Click Malaysia Button
+		e.click();
+		System.out.println("Malaysia Button was clicked.");
+		
+		return this;
+	}
+	
+	public LandingPage clickThailand() {
+		System.out.println("LandingPage > clickThailand() was invoked.");
+		
+		//Store Web Element for clickThailand
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(thailandButton));
+		System.out.println("Web Element for Thailand was stored.");
+		
+		//Click Thailand Button
+		e.click();
+		System.out.println("Thailand Button was clicked.");
+		
+		return this;
+	}
+	
 	public LandingPage clickLanguageSelector() {
 		System.out.println("LandingPage > clickLanguageSelector() was invoked.");
 		
@@ -122,8 +200,9 @@ public class LandingPage extends BasePage {
 		return this;
 	}
 	
-	public LandingPage clickEnglishButton() {
-		System.out.println("LandingPage > clickEnglishButton() was invoked.");
+	
+	public LandingPage clickEnglish() {
+		System.out.println("LandingPage > clickEnglish() was invoked.");
 		
 		//Store Web Element for englishButton
 		WebElement e = wait.until(ExpectedConditions.visibilityOf(englishButton));
@@ -136,25 +215,45 @@ public class LandingPage extends BasePage {
 		return this;
 	}
 	
+	public LandingPage clickBahasaMelayu() {
+		System.out.println("LandingPage > clickBahasaMelayuButton() was invoked.");
+		
+		//Store Web Element for clickBahasaMelayuButton
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(bahasaMelayuButton));
+		System.out.println("Web Element for Bahasa Melayu Button was stored.");
+		
+		//Click Bahasa Melayu Button
+		e.click();
+		System.out.println("Bahasa Melayu Button was clicked.");
+		
+		return this;
+	}
+	
+	public LandingPage clickThai() {
+		System.out.println("LandingPage > clickThai() was invoked.");
+		
+		//Store Web Element for thaiButton
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(thaiButton));
+		System.out.println("Web Element for thaiButton was stored.");
+		
+		//Click thaiButton
+		e.click();
+		System.out.println("Thai was clicked.");
+		
+		return this;
+	}
+	
 	public LandingPage verifyCountriesAvailable(String[] countriesAvailable) {
 		System.out.println("LandingPage > verifyCountriesAvailable() was invoked.");
 		
-		//Declare index
-		int index = 1;
-		System.out.println("Index was declared.");
-		
 		for (String country: countriesAvailable) {
 			//Store Web Element for Country Option
-			WebElement e = DriverManager.getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup["+index+"]/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView");
-			System.out.println("Web Element for Country Option was stored.");
+			WebElement e = DriverManager.getDriver().findElementByXPath("//*[@text='"+country+"']");
+			System.out.println("Web Element for Country Option '"+country+"' was stored.");
 					
 			//Assert if Country Option is equal to expected
 			Assert.assertEquals(e.getText(), country);
 			System.out.println("Assert completed for Country Option '"+country+"'.");
-			
-			//Increment Index
-			index++;
-			System.out.println("Index was incremented to '"+index+"'.");
 		}
 		
 		return this;
@@ -163,23 +262,92 @@ public class LandingPage extends BasePage {
 	public LandingPage verifySupportedLanguagesPerCountry(String[] languageAvailable) {
 		System.out.println("LandingPage > verifySupportedLanguagesPerCountry() was invoked.");
 		
-		//Declare index
-		int index = 1;
-		System.out.println("Index was declared.");
-		
 		for (String language: languageAvailable) {
 			//Store Web Element for Language Option
-			WebElement e = DriverManager.getDriver().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView");
-			System.out.println("Web Element for Language Option was stored.");
+			WebElement e = DriverManager.getDriver().findElementByXPath("//*[@text='"+language+"']");
 					
 			//Assert if Language Option is equal to expected
 			Assert.assertEquals(e.getText(), language);
 			System.out.println("Assert completed for Language Option '"+language+"'.");
-			
-			//Increment Index
-			index++;
-			System.out.println("Index was incremented to '"+index+"'.");
 		}
+		return this;
+	}
+	
+	public LandingPage verifyDaftarButtonIsPresent() {
+		System.out.println("LandingPage > verifyDaftarButtonIsPresent() was invoked.");
+		
+		//Store Web Element for Daftar Button
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(daftarButton));
+					
+		//Assert if Daftar Button is displayed
+		Assert.assertEquals(e.isDisplayed(), true);
+		System.out.println("Daftar Button was verified to be displayed.");
+		
+		return this;
+	}
+	
+	public LandingPage verifyLogMasukButtonIsPresent() {
+		System.out.println("LandingPage > verifyLogMasukButtonIsPresent() was invoked.");
+		
+		//Store Web Element for Log Masuk Button
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(logMasukButton));
+					
+		//Assert if Log Masuk Button is displayed
+		Assert.assertEquals(e.isDisplayed(), true);
+		System.out.println("Log Masuk Button was verified to be displayed.");
+		
+		return this;
+	}
+	
+	public LandingPage verifySignUpButtonIsPresent() {
+		System.out.println("LandingPage > verifySignUpButtonIsPresent() was invoked.");
+		
+		//Store Web Element for Sign Up Button
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(signUpButton));
+					
+		//Assert if Sign Up Button is displayed
+		Assert.assertEquals(e.isDisplayed(), true);
+		System.out.println("Sign Up Button was verified to be displayed.");
+		
+		return this;
+	}
+	
+	public LandingPage verifyLogInButtonIsPresent() {
+		System.out.println("LandingPage > verifyLogInButtonIsPresent() was invoked.");
+		
+		//Store Web Element for Log In Button
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(loginButton));
+					
+		//Assert if Log In Button is displayed
+		Assert.assertEquals(e.isDisplayed(), true);
+		System.out.println("Log In Button was verified to be displayed.");
+		
+		return this;
+	}
+	
+	public LandingPage verifySignUpThaiButtonIsPresent() {
+		System.out.println("LandingPage > verifySignUpThaiButtonIsPresent() was invoked.");
+		
+		//Store Web Element for Sign Up Thai Button
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(signUp_ThaiButton));
+					
+		//Assert if Sign Up Thai Button is displayed
+		Assert.assertEquals(e.isDisplayed(), true);
+		System.out.println("Sign Up Thai Button was verified to be displayed.");
+		
+		return this;
+	}
+	
+	public LandingPage verifyLogInThaiButtonIsPresent() {
+		System.out.println("LandingPage > verifyLogInThaiButtonIsPresent() was invoked.");
+		
+		//Store Web Element for Log In Thai Button
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(logIn_ThaiButton));
+					
+		//Assert if Log In Thai Button is displayed
+		Assert.assertEquals(e.isDisplayed(), true);
+		System.out.println("Log In Thai Button was verified to be displayed.");
+		
 		return this;
 	}
 }
