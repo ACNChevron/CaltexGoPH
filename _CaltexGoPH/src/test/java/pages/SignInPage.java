@@ -29,6 +29,10 @@ public class SignInPage extends BasePage {
 	@iOSXCUITFindBy(xpath = "//*[@text='Your login details are incorrect. Please try again or sign up for an account.']")
 	private WebElement errorMessage_IncorrectMobileNumber;
 	
+	@AndroidFindBy(xpath = "(//*[@id='LoginScreen']/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[1]")
+	@iOSXCUITFindBy(xpath = "(//*[@id='LoginScreen']/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[1]")
+	private WebElement backButton;
+	
 	public SignInPage enterMobileNumber(String mobileNumber) {
 		System.out.println("WelcomeBackLoginToContinuePage > enterMobileNumber() was invoked.");
 		
@@ -98,4 +102,18 @@ public class SignInPage extends BasePage {
 
 		return this;
 	}	
+	
+	public SignInPage clickBack() {
+		System.out.println("SignInPage > clickBack() was invoked.");
+		
+		//Store Web Element for Back Button
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(backButton));
+		System.out.println("Web Element for Back Button was stored.");
+		
+		//Click Back Button
+		e.click();
+		System.out.println("Back Button was clicked.");
+
+		return this;
+	}
 }

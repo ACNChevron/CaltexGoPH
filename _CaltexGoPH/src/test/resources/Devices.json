@@ -27,12 +27,33 @@
 	},
 	"Digital.ai_CaltexGo": {
 		"platformName":"Android",
-		"accessKey":"eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoyMTc5Mzg5MiwieHAucCI6MTc1OTQxNDUsInhwLm0iOjE2Njc0NDAyNzQzMTEsImV4cCI6MTk4MjgyMjc5OCwiaXNzIjoiY29tLmV4cGVyaXRlc3QifQ.kXAcZAKMe5-BczGWF92opHgqwLYg05OCEdLDG85Lyg0",
+		"accessKey":"eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoyMTc5Mzg5MiwieHAucCI6MTc1OTQxNDUsInhwLm0iOjE2Njc1MjQwMTU3MDQsImV4cCI6MTk4Mjg4NDA4MywiaXNzIjoiY29tLmV4cGVyaXRlc3QifQ.hqBGmF434UNhFzKO1TuxAhRbfgac_vNVZb0bccKAc64",
 		"testName":"CaltexGo_Samsung Galaxy A20 IO-SG 12",
 		"app":"cloud:com.chevron.caltexgo.prod/.MainActivity",
 		"appPackage":"com.chevron.caltexgo.prod",
 		"appActivity":".MainActivity",
 		"udid":"RZ8M80D9KGT",
+		"url":"https://cloud.seetest.io/wd/hub"
+	},
+	"Digital.ai_Samsung J6 plus IO-SG 10": {
+		"platformName":"Android",
+		"accessKey":"eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoyMTc5Mzg5MiwieHAucCI6MTc1OTQxNDUsInhwLm0iOjE2Njc1MjQwMTU3MDQsImV4cCI6MTk4Mjg4NDA4MywiaXNzIjoiY29tLmV4cGVyaXRlc3QifQ.hqBGmF434UNhFzKO1TuxAhRbfgac_vNVZb0bccKAc64",
+		"testName":"CaltexGo_Samsung J6 plus IO-SG 10",
+		"app":"cloud:com.chevron.caltexgo.prod/.MainActivity",
+		"appPackage":"com.chevron.caltexgo.prod",
+		"appActivity":".MainActivity",
+		"udid":"30a996da",
+		"url":"https://cloud.seetest.io/wd/hub"
+	},
+	"Digital.ai_Samsung Galaxy S20 Ultra 5G I": {
+		"platformName":"Android",
+		"automationName":"UiAutomator2",
+		"accessKey":"eyJhbGciOiJIUzI1NiJ9.eyJ4cC51IjoyMTc5Mzg5MiwieHAucCI6MTc1OTQxNDUsInhwLm0iOjE2Njc1MjQwMTU3MDQsImV4cCI6MTk4Mjg4NDA4MywiaXNzIjoiY29tLmV4cGVyaXRlc3QifQ.hqBGmF434UNhFzKO1TuxAhRbfgac_vNVZb0bccKAc64",
+		"testName":"CaltexGo_Samsung Galaxy S20 Ultra 5G I",
+		"app":"cloud:com.chevron.caltexgo.prod/.MainActivity",
+		"appPackage":"com.chevron.caltexgo.prod",
+		"appActivity":".MainActivity",
+		"udid":"R5CN400A7FW",
 		"url":"https://cloud.seetest.io/wd/hub"
 	}
 }

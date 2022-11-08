@@ -28,10 +28,14 @@ public class AccessDatasheet {
 		return ReadTestData(excelFilePath, sheetName);	
 	}
 	
-	public void WriteTestData(String ScenarioName, String DataName, String DataValue) throws IOException {
+	public void WriteGlobalTestData(String fileName, String dataName, String dataValue) throws IOException {
+		WriteTestData(".\\src\\test\\resources\\Global Datasheets\\"+fileName+".xlsx", dataName, dataValue);
+	}
+	
+	public void WriteTestData(String filePath, String dataName, String dataValue) throws IOException {
 		System.out.println("AccessDatasheet > WriteTestData() was invoked.");
 		
-		String excelfilePath = ".\\src\\test\\resources\\Datasheets\\"+ScenarioName+".xlsx";
+		String excelfilePath = filePath;
 		System.out.println("Excel File Path '"+excelfilePath+"' was stored.");
 		
 		FileInputStream inputstream = new FileInputStream(excelfilePath);
@@ -50,11 +54,11 @@ public class AccessDatasheet {
 		System.out.println("Row Header was stored.");
 		
 		for(int c=0;c<cols;c++) {
-			if(rowHeader.getCell(c).getStringCellValue().equals(DataName)) {
+			if(rowHeader.getCell(c).getStringCellValue().equals(dataName)) {
 				XSSFRow row = sheet.getRow(1);
 				XSSFCell cell = row.getCell(c);
-				cell.setCellValue(DataValue);
-				System.out.println("Cell value '"+DataValue+"' was set.");
+				cell.setCellValue(dataValue);
+				System.out.println("Cell value '"+dataValue+"' was set.");
 			}
 		}
 		

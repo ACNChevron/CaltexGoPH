@@ -2,8 +2,8 @@
 <suite parallel="false" name="Suite">
   <test name="Test">
     <classes>
-      <parameter name="deviceID" value="Digital.ai_CaltexGo"/>
-      <class name="tests.OnBoarding_LandingPage"/>
+      <parameter name="deviceID" value="Digital.ai_Samsung Galaxy S20 Ultra 5G I"/>
+      <class name="tests.ProfileManagement_MyAccount"/>
       <!-- <class name="tests.zTest"/> -->
     </classes>
   </test> <!-- Test -->

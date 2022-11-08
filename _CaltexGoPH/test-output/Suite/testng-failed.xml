@@ -2,15 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
-    <parameter name="deviceID" value="Digital.ai_CaltexGo"/>
+    <parameter name="deviceID" value="Digital.ai_Samsung Galaxy S20 Ultra 5G I"/>
     <classes>
-      <class name="tests.OnBoarding_LandingPage">
+      <class name="tests.ProfileManagement_MyAccount">
         <methods>
-          <include name="ChangeLanguage_VerifyPageTranslation_Thai" invocation-numbers="0"/>
           <include name="beforeTest"/>
+          <include name="EditProfile_EditUsingValidFirstNameAndLastName" invocation-numbers="0"/>
+          <include name="EditProfile_EditUsingInvalidFirstNameAndLastName" invocation-numbers="0"/>
           <include name="quit"/>
         </methods>
-      </class> <!-- tests.OnBoarding_LandingPage -->
+      </class> <!-- tests.ProfileManagement_MyAccount -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

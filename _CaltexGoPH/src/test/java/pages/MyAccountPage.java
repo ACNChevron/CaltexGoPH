@@ -28,9 +28,13 @@ public class MyAccountPage extends BasePage {
 	@iOSXCUITFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView")
 	private WebElement loyaltyProgramButton;
 	
-	@AndroidFindBy(xpath = "//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@text='Important Notice'] and ./*[@class='android.view.ViewGroup']]")
-	@iOSXCUITFindBy(xpath = "//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@text='Important Notice'] and ./*[@class='android.view.ViewGroup']]")
-	private WebElement closeImportantNoticeButton;
+	@AndroidFindBy(xpath = "//*[@text='Verify your email to secure your account and earn 5000 Caltex points!']")
+	@iOSXCUITFindBy(xpath = "//*[@text='Verify your email to secure your account and earn 5000 Caltex points!']")
+	private WebElement infoMessage_VerifyYourEmail;
+	
+	@AndroidFindBy(xpath = "//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@text='Verify your email to secure your account and earn 5000 Caltex points!']]]")
+	@iOSXCUITFindBy(xpath = "//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup'] and (./preceding-sibling::* | ./following-sibling::*)[@text='Verify your email to secure your account and earn 5000 Caltex points!']]]")
+	private WebElement infoMessage_CloseButton;
 	
 	public MyAccountPage clickSettings() {
 		System.out.println("MyAccountPage > clickSettings() was invoked.");
@@ -102,18 +106,31 @@ public class MyAccountPage extends BasePage {
 		return this;
 	}	
 	
-	public MyAccountPage closeImportantNotice() {
-		System.out.println("MyAccountPage > closeImportantNotice() was invoked.");
+	public MyAccountPage verifyInfoMessage_VerifyYourEmailExists() {
+		System.out.println("MyAccountPage > verifInfoMessage_VerifyYourEmailExists() was invoked.");
 		
-		//Store Web Element for Close Important Notice Button
-		WebElement e = wait.until(ExpectedConditions.visibilityOf(closeImportantNoticeButton));
-		System.out.println("Web Element for Close Important Notice Button was stored.");
+		//Store Web Element for infoMessage_VerifyYourEmail
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(infoMessage_VerifyYourEmail));
+		System.out.println("Web Element for Info Message Verify Your Email was stored.");
 		
-		//Click Close Important Notice Button
-		e.click();
-		System.out.println("Close Important Notice Button was clicked.");
+		//Verify Info Message Verify Your Email exists
+		e.isDisplayed();
+		System.out.println("Info Message was verified to be displayed.");
 
 		return this;
 	}	
 	
+	public MyAccountPage closeInfoMessage() {
+		System.out.println("MyAccountPage > closeInfoMessage() was invoked.");
+		
+		//Store Web Element for infoMessage_CloseButton
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(infoMessage_CloseButton));
+		System.out.println("Web Element for Info Message Close Button was stored.");
+		
+		//Click Info Message Close Button
+		e.click();
+		System.out.println("Info Message Close Button was clicked.");
+
+		return this;
+	}	
 }

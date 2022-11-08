@@ -16,6 +16,10 @@ public class EnterPasswordHereToLoginPage extends BasePage {
 	@iOSXCUITFindBy(xpath = "//*[@text='Login']")
 	private WebElement loginButton;
 	
+	@AndroidFindBy(xpath = "(//*[@id='LoginScreen']/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[1]")
+	@iOSXCUITFindBy(xpath = "(//*[@id='LoginScreen']/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[1]")
+	private WebElement backButton;
+	
 	public EnterPasswordHereToLoginPage enterPassword(String password) {
 		System.out.println("EnterPasswordHereToLoginPage > enterPassword() was invoked.");
 		
@@ -40,6 +44,20 @@ public class EnterPasswordHereToLoginPage extends BasePage {
 		//Click Login Button
 		e.click();
 		System.out.println("Login Button was clicked.");
+
+		return this;
+	}
+	
+	public EnterPasswordHereToLoginPage clickBack() {
+		System.out.println("EnterPasswordHereToLoginPage > clickBack() was invoked.");
+		
+		//Store Web Element for Back Button
+		WebElement e = wait.until(ExpectedConditions.visibilityOf(backButton));
+		System.out.println("Web Element for Back Button was stored.");
+		
+		//Click Back Button
+		e.click();
+		System.out.println("Back Button was clicked.");
 
 		return this;
 	}

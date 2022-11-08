@@ -1,116 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="9" passed="8">
+<testng-results skipped="0" failed="0" ignored="1" total="5" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="381170" started-at="2022-11-03T20:21:28 GMT+08:00" finished-at="2022-11-03T20:27:49 GMT+08:00">
+  <suite name="Suite" duration-ms="1671824" started-at="2022-11-05T00:24:29 GMT+08:00" finished-at="2022-11-05T00:52:21 GMT+08:00">
     <groups>
     </groups>
-    <test name="Test" duration-ms="381170" started-at="2022-11-03T20:21:28 GMT+08:00" finished-at="2022-11-03T20:27:49 GMT+08:00">
-      <class name="tests.OnBoarding_LandingPage">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:tests.OnBoarding_LandingPage@30a3107a]" name="beforeTest" is-config="true" duration-ms="52845" started-at="2022-11-03T20:21:28 GMT+08:00" finished-at="2022-11-03T20:22:21 GMT+08:00">
+    <test name="Test" duration-ms="1671824" started-at="2022-11-05T00:24:29 GMT+08:00" finished-at="2022-11-05T00:52:21 GMT+08:00">
+      <class name="tests.ProfileManagement_MyAccount">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:tests.ProfileManagement_MyAccount@1563da5]" name="beforeTest" is-config="true" duration-ms="43418" started-at="2022-11-05T00:24:29 GMT+08:00" finished-at="2022-11-05T00:25:13 GMT+08:00">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Digital.ai_CaltexGo]]>
+                <![CDATA[Digital.ai_Samsung Galaxy S20 Ultra 5G I]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="CountrySelector_VerifyCountriesAvailable(java.util.HashMap)[pri:1, instance:tests.OnBoarding_LandingPage@30a3107a]" name="CountrySelector_VerifyCountriesAvailable" duration-ms="37492" started-at="2022-11-03T20:22:22 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-03T20:22:59 GMT+08:00">
+        <test-method status="PASS" signature="Prereq1_SignIn(java.util.HashMap)[pri:1, instance:tests.ProfileManagement_MyAccount@1563da5]" name="Prereq1_SignIn" duration-ms="64145" started-at="2022-11-05T00:25:13 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-05T00:26:18 GMT+08:00">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Language Options_Australia=English, Language Options_Malaysia=English;Bahasa Melayu, Country Options=Australia;Malaysia;Philippines;Thailand, Language Options_Philippines=English, Language Options_Thailand=อังกฤษ;ไทย}]]>
+                <![CDATA[{New Last Name_Invalid=Last Name_Invalid, New First Name=First Name SLXAAAS, New First Name_Invalid=First Name_Invalid, New Last Name=Last Name LRNDMO}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CountrySelector_VerifyCountriesAvailable -->
-        <test-method status="PASS" signature="ChangeLanguage_VerifySupportedLanguagesPerCountry_Australia(java.util.HashMap)[pri:2, instance:tests.OnBoarding_LandingPage@30a3107a]" name="ChangeLanguage_VerifySupportedLanguagesPerCountry_Australia" duration-ms="44944" started-at="2022-11-03T20:22:59 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-03T20:23:44 GMT+08:00">
+        </test-method> <!-- Prereq1_SignIn -->
+        <test-method status="PASS" signature="EditProfile_EditUsingInvalidFirstNameAndLastName(java.util.HashMap)[pri:2, instance:tests.ProfileManagement_MyAccount@1563da5]" name="EditProfile_EditUsingInvalidFirstNameAndLastName" duration-ms="753002" started-at="2022-11-05T00:26:18 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-05T00:38:51 GMT+08:00">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Language Options_Australia=English, Language Options_Malaysia=English;Bahasa Melayu, Country Options=Australia;Malaysia;Philippines;Thailand, Language Options_Philippines=English, Language Options_Thailand=อังกฤษ;ไทย}]]>
+                <![CDATA[{New Last Name_Invalid=Last Name_Invalid, New First Name=First Name ZLWSLDB, New First Name_Invalid=First Name_Invalid, New Last Name=Last Name FDDDZT}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ChangeLanguage_VerifySupportedLanguagesPerCountry_Australia -->
-        <test-method status="PASS" signature="ChangeLanguage_VerifySupportedLanguagesPerCountry_Malaysia(java.util.HashMap)[pri:3, instance:tests.OnBoarding_LandingPage@30a3107a]" name="ChangeLanguage_VerifySupportedLanguagesPerCountry_Malaysia" duration-ms="48187" started-at="2022-11-03T20:23:44 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-03T20:24:32 GMT+08:00">
+        </test-method> <!-- EditProfile_EditUsingInvalidFirstNameAndLastName -->
+        <test-method status="PASS" signature="EditProfile_VerifyPopUpModal_BirthdayAndMobileNumber(java.util.HashMap)[pri:3, instance:tests.ProfileManagement_MyAccount@1563da5]" name="EditProfile_VerifyPopUpModal_BirthdayAndMobileNumber" duration-ms="68752" started-at="2022-11-05T00:38:51 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-05T00:39:59 GMT+08:00">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Language Options_Australia=English, Language Options_Malaysia=English;Bahasa Melayu, Country Options=Australia;Malaysia;Philippines;Thailand, Language Options_Philippines=English, Language Options_Thailand=อังกฤษ;ไทย}]]>
+                <![CDATA[{New Last Name_Invalid=Last Name_Invalid, New First Name=First Name NUZJRRM, New First Name_Invalid=First Name_Invalid, New Last Name=Last Name KGQGRC}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ChangeLanguage_VerifySupportedLanguagesPerCountry_Malaysia -->
-        <test-method status="PASS" signature="ChangeLanguage_VerifyPageTranslation_BahasaMelayu(java.util.HashMap)[pri:4, instance:tests.OnBoarding_LandingPage@30a3107a]" name="ChangeLanguage_VerifyPageTranslation_BahasaMelayu" duration-ms="20601" started-at="2022-11-03T20:24:32 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-03T20:24:53 GMT+08:00">
+        </test-method> <!-- EditProfile_VerifyPopUpModal_BirthdayAndMobileNumber -->
+        <test-method status="PASS" signature="EditProfile_EditUsingValidFirstNameAndLastName(java.util.HashMap)[pri:4, instance:tests.ProfileManagement_MyAccount@1563da5]" name="EditProfile_EditUsingValidFirstNameAndLastName" duration-ms="721079" started-at="2022-11-05T00:40:00 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-05T00:52:01 GMT+08:00">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Language Options_Australia=English, Language Options_Malaysia=English;Bahasa Melayu, Country Options=Australia;Malaysia;Philippines;Thailand, Language Options_Philippines=English, Language Options_Thailand=อังกฤษ;ไทย}]]>
+                <![CDATA[{New Last Name_Invalid=Last Name_Invalid, New First Name=First Name FKRBKYU, New First Name_Invalid=First Name_Invalid, New Last Name=Last Name CLDIXT}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ChangeLanguage_VerifyPageTranslation_BahasaMelayu -->
-        <test-method status="PASS" signature="ChangeLanguage_VerifySupportedLanguagesPerCountry_Philippines(java.util.HashMap)[pri:5, instance:tests.OnBoarding_LandingPage@30a3107a]" name="ChangeLanguage_VerifySupportedLanguagesPerCountry_Philippines" duration-ms="45450" started-at="2022-11-03T20:24:53 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-03T20:25:38 GMT+08:00">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Language Options_Australia=English, Language Options_Malaysia=English;Bahasa Melayu, Country Options=Australia;Malaysia;Philippines;Thailand, Language Options_Philippines=English, Language Options_Thailand=อังกฤษ;ไทย}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeLanguage_VerifySupportedLanguagesPerCountry_Philippines -->
-        <test-method status="PASS" signature="ChangeLanguage_VerifyPageTranslation_English(java.util.HashMap)[pri:6, instance:tests.OnBoarding_LandingPage@30a3107a]" name="ChangeLanguage_VerifyPageTranslation_English" duration-ms="20879" started-at="2022-11-03T20:25:39 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-03T20:25:59 GMT+08:00">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Language Options_Australia=English, Language Options_Malaysia=English;Bahasa Melayu, Country Options=Australia;Malaysia;Philippines;Thailand, Language Options_Philippines=English, Language Options_Thailand=อังกฤษ;ไทย}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeLanguage_VerifyPageTranslation_English -->
-        <test-method status="PASS" signature="ChangeLanguage_VerifySupportedLanguagesPerCountry_Thailand(java.util.HashMap)[pri:7, instance:tests.OnBoarding_LandingPage@30a3107a]" name="ChangeLanguage_VerifySupportedLanguagesPerCountry_Thailand" duration-ms="47556" started-at="2022-11-03T20:25:59 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-03T20:26:47 GMT+08:00">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Language Options_Australia=English, Language Options_Malaysia=English;Bahasa Melayu, Country Options=Australia;Malaysia;Philippines;Thailand, Language Options_Philippines=English, Language Options_Thailand=อังกฤษ;ไทย}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeLanguage_VerifySupportedLanguagesPerCountry_Thailand -->
-        <test-method status="PASS" signature="ChangeLanguage_VerifyPageTranslation_Thai(java.util.HashMap)[pri:8, instance:tests.OnBoarding_LandingPage@30a3107a]" name="ChangeLanguage_VerifyPageTranslation_Thai" duration-ms="41072" started-at="2022-11-03T20:26:47 GMT+08:00" data-provider="localDataSheet" finished-at="2022-11-03T20:27:28 GMT+08:00">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Language Options_Australia=English, Language Options_Malaysia=English;Bahasa Melayu, Country Options=Australia;Malaysia;Philippines;Thailand, Language Options_Philippines=English, Language Options_Thailand=อังกฤษ;ไทย}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeLanguage_VerifyPageTranslation_Thai -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:tests.OnBoarding_LandingPage@30a3107a]" name="quit" is-config="true" duration-ms="20989" started-at="2022-11-03T20:27:28 GMT+08:00" finished-at="2022-11-03T20:27:49 GMT+08:00">
+        </test-method> <!-- EditProfile_EditUsingValidFirstNameAndLastName -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:tests.ProfileManagement_MyAccount@1563da5]" name="quit" is-config="true" duration-ms="20298" started-at="2022-11-05T00:52:01 GMT+08:00" finished-at="2022-11-05T00:52:21 GMT+08:00">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- tests.OnBoarding_LandingPage -->
+      </class> <!-- tests.ProfileManagement_MyAccount -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

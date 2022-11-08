@@ -15,8 +15,8 @@ import pages.SignInPage;
 import utils.AccessDatasheet;
 
 public class ProfileManagement_MyAccount extends BaseTest {
-	@Test(dataProvider="localDataSheet")
-	public void Prereq1_clickAllow (HashMap<String, String> testData) throws InterruptedException {		
+	@Test(dataProvider="localDataSheet", priority=0, enabled=false)
+	public void Prereq_clickAllow (HashMap<String, String> testData) throws InterruptedException {		
 		
 		LandingPage landingPage = new LandingPage();
 		
@@ -25,8 +25,8 @@ public class ProfileManagement_MyAccount extends BaseTest {
 		Thread.sleep(3000);		
 	}
 	
-	@Test(dataProvider="localDataSheet")
-	public void Prereq2_SignInUsingMobileNumber (HashMap<String, String> testData) throws InterruptedException, IOException {		
+	@Test(dataProvider="localDataSheet", priority=1)
+	public void Prereq1_SignIn (HashMap<String, String> testData) throws InterruptedException, IOException {		
 		
 		HashMap <String, String> credentials = new AccessDatasheet().ReadGlobalTestData("Credentials");
 		
@@ -36,6 +36,8 @@ public class ProfileManagement_MyAccount extends BaseTest {
 		
 		EnterPasswordHereToLoginPage passwordPage = new EnterPasswordHereToLoginPage();
 		
+		HomePage homePage = new HomePage();
+		
 		landingPage.clickLogin();
 		
 		signInPage.enterMobileNumber(credentials.get("Mobile Number"));
@@ -44,14 +46,14 @@ public class ProfileManagement_MyAccount extends BaseTest {
 
 		passwordPage.enterPassword(credentials.get("Current Password"));
 		
-		passwordPage.clickLogin();
+		passwordPage.clickLogin();	
 		
-		Thread.sleep(3000);		
+		homePage.closeImportantNotice();
 	}
 	
-	@Test(dataProvider="localDataSheet")
-	public void TS1_EditProfile (HashMap<String, String> testData) throws InterruptedException, IOException {		
-				
+	@Test(dataProvider="localDataSheet", priority=2)
+	public void EditProfile_EditUsingInvalidFirstNameAndLastName (HashMap<String, String> testData) throws InterruptedException, IOException {		
+					
 		HomePage homePage = new HomePage();
 		
 		MyAccountPage myAccountPage = new MyAccountPage();
@@ -62,12 +64,48 @@ public class ProfileManagement_MyAccount extends BaseTest {
 		
 		myAccountPage.clickEditProfie();
 		
+		editProfilePage.enterNewFirstName(testData.get("New First Name_Invalid"));
+		
+		editProfilePage.verifyErrorMessage_FirstNameShouldNotContainSpecialCharacters();
+		
+		editProfilePage.enterNewLastName(testData.get("New Last Name_Invalid"));
+		
+		editProfilePage.verifyErrorMessage_LastNameShouldNotContainSpecialCharacters();
+	}
+	
+	@Test(dataProvider="localDataSheet", priority=3)
+	public void EditProfile_VerifyPopUpModal_BirthdayAndMobileNumber (HashMap<String, String> testData) throws InterruptedException, IOException {		
+		
+		EditProfilePage editProfilePage = new EditProfilePage();
+		
+		editProfilePage.clickBirthMonthAndYear();
+		
+		editProfilePage.verifyPopUpModal();
+		
+		editProfilePage.closePopUpModal();
+		
+		editProfilePage.clickMobileNumber();
+		
+		editProfilePage.verifyPopUpModal();
+		
+		editProfilePage.closePopUpModal();
+	}
+	
+	@Test(dataProvider="localDataSheet", priority=4)
+	public void EditProfile_EditUsingValidFirstNameAndLastName (HashMap<String, String> testData) throws InterruptedException, IOException {		
+		
+		EditProfilePage editProfilePage = new EditProfilePage();
+		
+		MyAccountPage myAccountPage = new MyAccountPage();
+		
 		editProfilePage.enterNewFirstName(testData.get("New First Name"));
 		
 		editProfilePage.enterNewLastName(testData.get("New Last Name"));
 		
 		editProfilePage.clickSave();
 		
-		Thread.sleep(3000);		
+		myAccountPage.clickLogOut();
+		
+		myAccountPage.clickYesIdLikeToLogOut();
 	}
 }
